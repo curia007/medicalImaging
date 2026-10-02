@@ -1,0 +1,3 @@
+{
+  "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{ '<context>\n' + message['content'] + '\n<sep>\n' }}{% elif message['role'] == 'user' %}{{ '<query>\n' + message['content'] + '\n<sep>\n' }}{% elif message['role'] == 'assistant' %}{{ '<response>\n' + message['content'] + eos_token + '\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<response>\n' }}{% endif %}"
+}

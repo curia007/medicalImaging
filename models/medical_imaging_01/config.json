@@ -1,0 +1,24 @@
+{
+  "model_type": "llama",
+  "model_name": "medical_imaging_01",
+  "architectures": [
+    "MedicalImaging01ForCausalLM"
+  ],
+  "vocab_size": 1024,
+  "hidden_size": 256,
+  "num_hidden_layers": 4,
+  "intermediate_size": 704,
+  "num_attention_heads": 8,
+  "num_key_value_heads": 8,
+  "max_position_embeddings": 512,
+  "hidden_dim": 256,
+  "num_heads": 8,
+  "num_kv_heads": 8,
+  "num_layers": 4,
+  "intermediate_dim": 704,
+  "max_seq_len": 512,
+  "rope_theta": 10000.0,
+  "rms_norm_eps": 1e-05,
+  "domain": "medical_imaging",
+  "description": "LLaMA-based model for medical imaging diagnosis and structured clinical reasoning"
+}

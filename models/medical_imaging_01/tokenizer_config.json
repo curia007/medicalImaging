@@ -1,0 +1,18 @@
+{
+  "add_bos_token": true,
+  "add_eos_token": false,
+  "bos_token": "<bos>",
+  "clean_up_tokenization_spaces": false,
+  "eos_token": "<eos>",
+  "model_max_length": 512,
+  "pad_token": "<pad>",
+  "tokenizer_class": "MedicalImaging01Tokenizer",
+  "unk_token": "<unk>",
+  "chat_template": "{% for message in messages %}{% if message['role'] == 'system' %}{{ '<context>\n' + message['content'] + '\n<sep>\n' }}{% elif message['role'] == 'user' %}{{ '<query>\n' + message['content'] + '\n<sep>\n' }}{% elif message['role'] == 'assistant' %}{{ '<response>\n' + message['content'] + eos_token + '\n' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<response>\n' }}{% endif %}",
+  "special_tokens_map": {
+    "bos_token": "<bos>",
+    "eos_token": "<eos>",
+    "pad_token": "<pad>",
+    "unk_token": "<unk>"
+  }
+}
